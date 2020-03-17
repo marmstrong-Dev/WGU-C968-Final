@@ -1,0 +1,41 @@
+﻿<Window x:Class="C968_WGU.EditPartForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:C968_WGU"
+        mc:Ignorable="d"
+        Title="Edit Part" Height="768" Width="1366" Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="Edit Part" HorizontalAlignment="Left" Margin="128,70,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="32"/>
+        <Label Name="EditPrtIDLabel" Content="Part ID: " HorizontalAlignment="Left" Margin="1019,70,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+        
+        <StackPanel Margin="10,122,1097,470">
+            <Label Padding="12" FontFamily="Arial" FontSize="16">In House</Label>
+            <RadioButton Name="EditIHInput" Checked="EditIHInput_Checked"></RadioButton>
+            <Label Padding="12" FontFamily="Arial" FontSize="16">Outsourced</Label>
+            <RadioButton Name="EditOSInput" Checked="EditOSInput_Checked"></RadioButton>
+        </StackPanel>
+
+        <StackPanel Margin="10,265,600,181">
+            <Label Padding="12" FontFamily="Arial" FontSize="16">Part Name:</Label>
+            <TextBox Name="EditNameInput" FontFamily="Arial" FontSize="16"></TextBox>
+            <Label Padding="12" FontFamily="Arial" FontSize="16">Part Price:</Label>
+            <TextBox Name="EditPriceInput" FontFamily="Arial" FontSize="16"></TextBox>
+            <Label Padding="12" FontFamily="Arial" FontSize="16">Units In Stock:</Label>
+            <TextBox Name="EditQtyInput" FontFamily="Arial" FontSize="16"></TextBox>
+            <Label Name="EditSwitcherLabel" Content="Machine ID:" Padding="12" FontFamily="Arial" FontSize="16"></Label>
+            <TextBox Name="EditSwitcherInput" FontFamily="Arial" FontSize="16"></TextBox>
+        </StackPanel>
+
+        <StackPanel Margin="1015,265,62,186">
+            <Label Padding="12" FontFamily="Arial" FontSize="16">Min:</Label>
+            <TextBox Name="EditMinInput" FontFamily="Arial" FontSize="16"></TextBox>
+            <Label Padding="12" FontFamily="Arial" FontSize="16">Max:</Label>
+            <TextBox Name="EditMaxInput" FontFamily="Arial" FontSize="16"></TextBox>
+        </StackPanel>
+
+        <Button Name="SaveEditBtn" Content="Save" Background="LightSeaGreen" HorizontalAlignment="Left" Height="58" Margin="850,0,0,41" VerticalAlignment="Bottom" Width="208" FontFamily="Arial" FontSize="14" Click="SaveEditBtn_Click"/>
+        <Button Name="CancelEditBtn" Content="Cancel" Background="LightSeaGreen" HorizontalAlignment="Left" Height="58" Margin="1088,0,0,41" VerticalAlignment="Bottom" Width="208" FontFamily="Arial" FontSize="14" Click="CancelEditBtn_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,66 @@
+﻿<Window x:Class="C968_WGU.EditProductForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:C968_WGU"
+        mc:Ignorable="d"
+        Title="Edit Product" Height="768" Width="1366" Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="Edit Product" Margin="33,29,1024,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="32"/>
+
+        <Label FontFamily="Arial" FontSize="14" Margin="544,7,561,696">All Candidate Parts</Label>
+        <TextBox Name="EditedCandidateSearchInput" HorizontalAlignment="Left" Height="27" Margin="976,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178"/>
+        <Button Name="EditedCandidateSearchBtn" Content="Search" HorizontalAlignment="Left" Height="27" Margin="1159,7,0,0" Background="LightSeaGreen" VerticalAlignment="Top" Width="66" FontFamily="Arial" RenderTransformOrigin="1.686,0.933" Click="EditedCandidateSearchBtn_Click"/>
+        <Button Name="EditedCandidateResetBtn" Content="Reset" HorizontalAlignment="Left" Height="27" Margin="1230,7,0,0" VerticalAlignment="Top" Width="66" Background="LightSeaGreen" FontFamily="Arial" RenderTransformOrigin="1.686,0.933" Click="EditedCandidateResetBtn_Click"/>
+        <DataGrid Name="EditedAvailableProdDataGrid" HorizontalAlignment="Left" Height="250" Margin="544,41,0,0" VerticalAlignment="Top" Width="752">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="LightSeaGreen"/>
+                    <Setter Property="FontFamily" Value="Arial"/>
+                    <Setter Property="Height" Value="20"/>
+                    <Setter Property="Width" Value="130"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+
+        <Label FontFamily="Arial" FontSize="14" Margin="544,312,561,391" RenderTransformOrigin="0.612,0.422">Parts Associated With Product</Label>
+        <TextBox Name="EditedAssociatedSearchInput" HorizontalAlignment="Left" Height="27" Margin="976,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178"/>
+        <Button Name="EditedAssociatedSearchBtn" Content="Search" HorizontalAlignment="Left" Height="27" Margin="1159,314,0,0" Background="LightSeaGreen" VerticalAlignment="Top" Width="66" FontFamily="Arial" RenderTransformOrigin="1.686,0.933" Click="EditedAssociatedSearchBtn_Click"/>
+        <Button Name="EditedAssociatedResetBtn" Content="Reset" HorizontalAlignment="Left" Height="27" Margin="1230,314,0,0" VerticalAlignment="Top" Width="66" Background="LightSeaGreen" FontFamily="Arial" RenderTransformOrigin="1.686,0.933" Click="EditedAssociatedResetBtn_Click"/>
+        <DataGrid Name="EditedAssociatedProdDataGrid" HorizontalAlignment="Left" Height="250" Margin="544,346,0,0" VerticalAlignment="Top" Width="752">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="LightSeaGreen"/>
+                    <Setter Property="FontFamily" Value="Arial"/>
+                    <Setter Property="Height" Value="20"/>
+                    <Setter Property="Width" Value="130"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+
+        <StackPanel Margin="10,117,931,396">
+            <Label Padding="12" FontFamily="Arial" FontSize="16">Product Name:</Label>
+            <TextBox Name="EditedProdNameInput" FontFamily="Arial" FontSize="16"></TextBox>
+            <Label Padding="12" FontFamily="Arial" FontSize="16">Product Price:</Label>
+            <TextBox Name="EditedProdPriceInput" FontFamily="Arial" FontSize="16"></TextBox>
+            <Label Padding="12" FontFamily="Arial" FontSize="16">Units In Stock:</Label>
+            <TextBox Name="EditedProdQtyInput" FontFamily="Arial" FontSize="16"></TextBox>
+        </StackPanel>
+
+        <StackPanel Margin="10,346,1060,241">
+            <Label Padding="12" FontFamily="Arial" FontSize="16">Min:</Label>
+            <TextBox Name="EditedProdMinInput" FontFamily="Arial" FontSize="16"></TextBox>
+            <Label Padding="12" FontFamily="Arial" FontSize="16">Max:</Label>
+            <TextBox Name="EditedProdMaxInput" FontFamily="Arial" FontSize="16"></TextBox>
+        </StackPanel>
+
+        <Label Name="EditProdIDLabel" Content="Product ID: " HorizontalAlignment="Left" Height="37" Margin="10,661,0,0" VerticalAlignment="Top" Width="160" FontFamily="Arial" FontSize="16"/>
+
+        <Button Name="SaveEditedProdBtn" Content="Save" HorizontalAlignment="Left" Height="58" Margin="850,0,0,41" Background="LightSeaGreen" VerticalAlignment="Bottom" Width="208" FontFamily="Arial" FontSize="14" Click="SaveEditedProdBtn_Click"/>
+        <Button Name="CancelEditedProdBtn" Content="Cancel" HorizontalAlignment="Left" Height="58" Margin="1088,0,0,41" Background="LightSeaGreen" VerticalAlignment="Bottom" Width="208" FontFamily="Arial" FontSize="14" Click="CancelEditedProdBtn_Click"/>
+        <Button Name="EditedAssociationRemover" Content="Remove" HorizontalAlignment="Left" Height="56" Margin="483,540,0,0" Background="LightSeaGreen" VerticalAlignment="Top" Width="56" Click="EditedAssociationRemover_Click"/>
+        <Button Name="EditedAssociationAdder" Content="Add" HorizontalAlignment="Left" Height="56" Margin="483,235,0,0" Background="LightSeaGreen" VerticalAlignment="Top" Width="56" Click="EditedAssociationAdder_Click"/>
+        
+    </Grid>
+</Window>
