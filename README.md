@@ -1,6 +1,6 @@
 # WGU-C968-Final
-Project for C968 - Software I
-Built with Visual Studio Community Edition
+Project for C968 - Software I -- 
+Built with Visual Studio Community Edition -- 
 .NET Framework 4.7.2
  
 ## Scenario
